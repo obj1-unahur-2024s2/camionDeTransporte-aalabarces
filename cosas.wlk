@@ -76,7 +76,7 @@ object contenedor {
 	method sacarDelContenido(objeto){
 		contenido.remove(objeto)
 	}
-	method bultos()=1+contenido.size()
+	method bultos()=1+contenido.sum({ c=> c.bultos()})
 	method cambiar(){
 		carga.forEach({c=>c.cambiar()})
 	}
